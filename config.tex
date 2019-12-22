@@ -1,0 +1,40 @@
+\documentclass[runningheads]{llncs}
+
+% Packages
+\usepackage[
+	a4paper,
+	left=44mm,
+	right=44mm,
+	top=52mm,
+	bottom=52mm
+]{geometry}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[
+	colorlinks=true,
+	citecolor=black,
+	linkcolor=black,
+	urlcolor=blue,
+	bookmarksopen=true
+]{hyperref}
+\usepackage{bm} % bold math symbols
+\usepackage{tikz} % creating graphic vectors
+\usepackage{pgfplots} % plots
+\usepackage{enumitem} % control over itemize, enumerate
+\usepackage{array}
+
+% Paths
+\graphicspath{{media/}}
+
+% Geometry
+\pgfplotsset{
+	width=7.5cm,
+	compat=1.12
+}
+\setlist{topsep=4pt}
+
+% Commands
+\renewcommand\UrlFont{\color{blue}\rmfamily} % blue roman url font, Springer's eBook style
+\newcolumntype{A}{>{}m{2.2cm}}
+\newcolumntype{B}{>{}m{9cm}}
