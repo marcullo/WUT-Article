@@ -38,9 +38,9 @@ Nadmierne odstępy pionowe utrudniają odbiór tekstu. Wdrożenie zasady łamani
 \subsection{Uzupełnienia treści.}
 \label{subsec:additions}
 
-Wśród często stosowanych obiektów urozmaicających treść są tabele i~rysunki. Rozpatrzmy oba przykłady (Tab. \ref{tab:styles}, Rys. \ref{fig:devop}). Opis powinien znajdować się powyżej tabeli, ale poniżej rysunku. Należy zwrócić uwagę na dopasowanie rozmiaru obiektów do pozostałej treści strony.
+Wśród często stosowanych obiektów urozmaicających treść są tabele i~rysunki. Rozpatrzmy oba przykłady (Rys.~\ref{fig:devop}, Tab.~\ref{tab:styles}). Opis powinien znajdować się powyżej tabeli, ale poniżej rysunku. Należy zwrócić uwagę na dopasowanie rozmiaru obiektów do pozostałej treści strony.
 
-\begin{table}
+\begin{table}[!h]
 	\vspace{-4mm}
 	\caption{
 		Style wlewania tekstu.
@@ -64,15 +64,41 @@ Wśród często stosowanych obiektów urozmaicających treść są tabele i~rys
 	\vspace{-6mm}
 \end{table}
 
-\begin{figure}
-	\begin{center}
-		\vspace{-5mm}
-		\includegraphics[width=8cm]{device-operation.png}
+{
+\tikzset{sub/.style = {shape=rectangle, draw, align=center}}
+\tikzset{beg/.style = {circle, fill=black}}
+\tikzset{end/.style = {circle}}
+\tikzset{non/.style = {draw=none}}
+
+\begin{figure}[!h]
+	\centering
+	\subfloat{
+		\includegraphics[width=12cm]{figure-legend.png}
+	}\\
+	\subfloat{
+	\begin{tikzpicture}[
+			every node/.style = sub
+		]
+		% Nodes
+		\node[beg]  (beg) at (-1.5, 0.0) {};
+		\node[end]  (end) at ( 7.5, 0.0) {};
+		\node         (a) at ( 0.0, 0.0) {PPMGR};
+		\node         (b) at ( 2.0, 0.0) {PDMGR};
+		\node         (c) at ( 2.0, 0.7) {SDM1};
+		\node         (d) at ( 4.0, 0.7) {SDM2};
+		\node         (e) at ( 4.0, 0.0) {PDYM};
+		\node         (f) at ( 6.0, 0.0) {EDYM};
+		% Arrows
+		\foreach \from/\to in {beg/a, a/b, a/c, c/d, b/e, e/f, f/end}
+			\draw [->] (\from) |- (\to);
+		\foreach \from/\to in {d/f}
+			\draw [->] (\from) -| (\to);
+		\end{tikzpicture}
+	}
 		\caption{Krótkie podpisy należy wyrównać do środka.}
 		\label{fig:devop}
-		\vspace{-8mm}
-	\end{center}
 \end{figure}
+}
 
 \noindent Zazwyczaj w~tekście anonsujemy, objaśniamy lub komentujemy ilustracje i~tabele. W~ten sposób Czytelnik jest w stanie poznać intencje autora dotyczące prezentacji obiektów urozmaicających w~artykule. Podpis powinien identyfikować zawartość, a~jeśli potrzebne jest obszerniejsze omówienie, to pojawia się ono w~tekście.
 
