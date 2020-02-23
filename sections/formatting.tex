@@ -108,35 +108,54 @@ Wśród często stosowanych obiektów urozmaicających treść są tabele i~rys
 Korzystając z~tej formy prezentacji informacji, warto pamiętać o~opisaniu osi wykresu, użyciu adekwatnej skali i~typie dostosowanym do rodzaju danych, a~także konsekwencji stylistycznej.
 
 \begin{figure}[!h]
-	\vspace{-3mm}
 	\centering
 	\begin{tikzpicture}
-		\begin{axis}[
-			xlabel={zestaw danych},
-			ylabel={rozmiar [b]},
-			width=0.9\textwidth,
-			height=5.5cm,
-			xmin = 1,
-			xmax = 90,
-			ymax = 85000,
-			minor y tick num = 4,
-			legend columns=-1
-		]
-			\addplot table[
-				x=lp,y=prop,mark=none
-			]{results.csv}; \addlegendentry{propozycja}
-			\addplot table[
-				x=lp,y=rle,mark=none
-			]{results.csv}; \addlegendentry{k. długości serii}
-			\addplot table[
-				x=lp,y=huffman,mark=none
-			]{results.csv}; \addlegendentry{k. Huffmana}
-			\draw [dashed] (0, 46080) -- (90, 46080);
-		\end{axis}
+	\begin{axis} [
+		minor y tick num = 4,
+		ymajorgrids,
+		%ybar,
+		%%bar width={3pt},
+		xtick=data,
+		xlabel = {rok akademicki},
+		ylabel = {liczba uczestników},
+		symbolic x coords = {16L,16Z,17L,17Z,18L,18Z,19L,19Z},
+		ymin=130, ymax=190
+	]
+		\addplot+ coordinates {
+			%(16L, 155)
+			%(16Z, 159)
+			(17L, 172)
+			(17Z, 183)
+			(18L, 168)
+			(18Z, 152)
+			(19L, 158)
+			(19Z, 156)
+		}; \addlegendentry{PDMGR};
+		\addplot+ coordinates {
+			%(16L, 135)
+			%(16Z, 162)
+			(17L, 170)
+			(17Z, 159)
+			(18L, 162)
+			(18Z, 137)
+			(19L, 144)
+			(19Z, 154)
+		}; \addlegendentry{SDM1};
+		\addplot+[mark=triangle*] coordinates {
+			%(16L, 200)
+			%(16Z, 115)
+			(17L, 162)
+			(17Z, 154)
+			(18L, 175)
+			(18Z, 161)
+			(19L, 143)
+			(19Z, 138)
+		}; \addlegendentry{SDM2};
+	\end{axis}
 	\end{tikzpicture}
-	\caption{Długie podpisy, tj.~zajmujące więcej niż jedną linię, należy wyrównać obustronnie. Wielkość czcionek w~opisach obiektów na ilustracjach powinna być zbliżona do wielkości czcionki używanej w~podpisie. Obyczaj używania znaczników wynika z~nieczytelności kolorowych wykresów na czarno-białych wydrukach i~kopiach.}
-	\vspace{-6mm}
-	\label{fig:compressionAlgorithms}
+	\caption{Długie podpisy (zajmujące więcej niż jedną linię), należy wyrównać obustronnie. Wielkość czcionek w~opisach obiektów na ilustracjach powinna być zbliżona do wielkości używanej w~podpisie. Obyczaj używania znaczników wynika z~nieczytelności kolorowych wykresów na czarno-białych wydrukach i~kopiach.}
+	\label{fig:stats}
+	\vspace{-20pt}
 \end{figure}
 
 \subsubsection{Wnioskowanie logiczne.}
