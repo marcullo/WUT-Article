@@ -6,14 +6,14 @@ Czcionki tytułu, i~czterech poziomów zagnieżdżeń sekcji powinny odpowiednio
 \subsection{Podział tekstu}
 \label{subsec:textDivision}
 
-Pierwszy akapit sekcji (niezależnie od poziomu ich zagnieżdżenia) występuje z~pominięciem wcięcia, podobnie akapit występujący po ilustracji lub tabeli.
+Pierwszy akapit sekcji (niezależnie od poziomu zagnieżdżenia) występuje z~pominięciem wcięcia, podobnie akapit występujący po ilustracji lub tabeli.
 
 Następujące po nim akapity powinny być wcięte.
 
 \subsubsection{Poziomy sekcji.}
 \label{subsubsec:levels}
 
-Jak można zauważyć, nagłówek 3.~i~4. poziomu sekcji należy kończyć kropką \cite{ref:lncs}. Wyłącznie dwa pierwsze poziomy są numerowane. Dalsze zagnieżdżenie skutkuje brakiem numeracji -- wymagany sposób formatowania tekstu w~tym przypadku to wlewanie nagłówków w~tej samej linii.
+Jak można zauważyć, nagłówek 3.~i~4. poziomu sekcji należy zakończyć kropką \cite{ref:lncs}. Wyłącznie dwa pierwsze poziomy są numerowane. Dalsze zagnieżdżenie skutkuje brakiem numeracji -- wymagany sposób formatowania tekstu w~tym przypadku to wlewanie nagłówków w~tej samej linii.
 
 \paragraph{Granice zagnieżdżania.}
 \label{par:nestingLimits}
@@ -23,17 +23,17 @@ W niniejszym szablonie dopuszcza się możliwość stosowania maksymalnie cztere
 \subsubsection{Dzielenie wyrazów.}
 \label{subsubsec:wordbreak}
 
-Należy pamiętać o~dzieleniu wyrazów zgodnie z~polską ortografią. W~tym celu, należy stosować łącznik -- pauzę lub półpauzę. Sugeruje się unikanie pauzy w~celu zwiększenia czytelności tekstu.
+Należy pamiętać o~dzieleniu wyrazów z~wykorzystaniem dywizu, a~także łącznika -- pauzy lub półpauzy -- zgodnie z~polskimi regułami słownikowymi. Sugeruje się jednak zastąpienie pauzy półpauzą w~celu zwiększenia czytelności tekstu.
 
 \subsubsection{Łamanie linii.}
 \label{subsubsec:linebreak}
 
-Tekst powinien być wyrównany obustronnie. Część wyrazów w~języku polskim (np. krótkie spójniki) nie może być stosowana na końcu linii. Aby tego uniknąć, należy zastosować skrypt porządkujący tekst lub korzystać ze znaku twardej spacji. Należy zastosować słownikowe reguły dzielenia wyrazów w~celu zwiększenia czytelności tekstu.
+Tekst powinien być wyrównany obustronnie. Część wyrazów w~języku polskim (np. krótkie spójniki) nie może być stosowana na końcu linii. Aby tego uniknąć, należy zastosować skrypt porządkujący tekst lub korzystać ze znaku twardej spacji.
 
 \subsubsection{Łamanie stron.}
 \label{subsubsec:pagebreak}
 
-Dobrą praktyką, nie zawsze możliwą do realizacji, jest przejście do nowej strony na granicach akapitów i~w~taki sposób, aby w treści akapitu kończącego stronę nie było odwołania do ilustracji/tabeli znajdującego się na kolejnej. Należy unikać kontynuacji niewielkiej części wątku na następnej stronie, szczególnie jeśli jest parzysta (niewidoczna w~trybie czytania dwóch stron naraz).
+Dobrą praktyką, nie zawsze możliwą do realizacji, jest przejście do nowej strony na granicach akapitów i~w~taki sposób, aby w treści akapitu kończącego stronę nie było odwołania do ilustracji/tabeli znajdującej się na kolejnej. Należy unikać kontynuacji niewielkiej części wątku na następnej stronie, szczególnie jeśli jest parzysta (niewidoczna w~trybie czytania dwóch stron naraz).
 
 \subsubsection{Odstępy pionowe.}
 \label{subsubsec:verticalSpace}
@@ -107,7 +107,7 @@ Wśród często stosowanych obiektów urozmaicających treść są tabele i~rys
 	\vspace{-6mm}
 \end{table}
 
-\noindent Zazwyczaj w~tekście anonsujemy, objaśniamy lub komentujemy ilustracje i~tabele. W~ten sposób Czytelnik jest w stanie poznać intencje autora dotyczące prezentacji obiektów urozmaicających w~artykule. Podpis powinien znajdować się powyżej tabeli, ale poniżej rysunku. Powinien także identyfikować zawartość, a~jeśli potrzebne jest obszerniejsze omówienie, to pojawia się ono w~tekście. Należy zwrócić uwagę na dopasowanie rozmiaru obiektów do pozostałej treści strony.
+\noindent Podpis powinien znajdować się powyżej tabeli, ale poniżej rysunku. Powinien także identyfikować zawartość, a~jeśli potrzebne jest obszerniejsze omówienie, to należy je zamieścić w~tekście, w~którym zazwyczaj anonsujemy, objaśniamy lub komentujemy zawartość ilustracji i~tabel. W~ten sposób Czytelnik jest w~stanie poznać intencje autora dotyczące prezentacji obiektów urozmaicających w~artykule. Warto też zwrócić uwagę na dopasowanie rozmiaru wykorzystanych obiektów do pozostałej treści strony.
 
 \subsubsection{Wykresy.}
 \label{subsubsec:charts}
@@ -123,7 +123,7 @@ Korzystając z~tej formy prezentacji informacji, warto pamiętać o~opisaniu osi
 		%ybar,
 		%%bar width={3pt},
 		xtick=data,
-		xlabel = {rok akademicki},
+		xlabel = {semestr akademicki},
 		ylabel = {liczba uczestników},
 		symbolic x coords = {16L,16Z,17L,17Z,18L,18Z,19L,19Z},
 		ymin=130, ymax=190
@@ -180,7 +180,7 @@ Korzysta się z~wielu form prezentacji logicznych wyrażeń: pytania, spostrze�
 		b^{2} = a^{2} + (b-a)(b+a).
 	\end{equation}
 
-	\noindent Skoro liczba $a^{2}$ jest podzielna przez $a+b$, to prawa strona równania (\ref{eq:formula}) również, na podstawie rozdzielności mnożenia względem dodawania, ponieważ jest sumą liczb podzielnych przez $a+b$. \qed
+	\noindent Jeśli liczba $a^{2}$ jest podzielna przez $a+b$, to prawa strona równania (\ref{eq:formula}) również, na podstawie rozdzielności mnożenia względem dodawania, ponieważ jest sumą liczb podzielnych przez $a+b$. \qed
 \end{proof}
 
 Należy zwrócić szczególną uwagę na spójność argumentacji i~dostosowanie poziomu szczegółowości wnioskowania do spodziewanego stanu wiedzy odbiorcy artykułu. Sugeruje się zastosowanie krytycznego podejścia do autorskich badań, precyzyjny opis procedury i~środowiska testowego, a~także wnikliwą analizę otrzymanych rezultatów.
