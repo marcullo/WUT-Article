@@ -17,7 +17,7 @@
 	linkcolor=black,
 	urlcolor=blue,
 	bookmarksopen=true
-]{hyperref}
+]{hyperref} % hyperref is necessary for \emailsubj of used class
 \usepackage{bm} % bold math symbols
 \usepackage{tikz} % creating graphic vectors
 \usepackage{pgfplots} % plots
@@ -41,5 +41,9 @@
 \renewcommand\UrlFont{\color{blue}\rmfamily} % blue roman url font, Springer's eBook style
 \newcolumntype{A}{>{}m{2.2cm}}
 \newcolumntype{B}{>{}m{9cm}}
+\newcommand\dummyemail{
+	\hypersetup{urlcolor=black}
+	\emailsubj[gall.anonim.stud@pw.edu.pl]{Warning! Provided e-mail address is dummy. Do not send a message.}
+}
 
 \floatname{algorithm}{Listing} % name
