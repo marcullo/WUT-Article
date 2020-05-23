@@ -25,6 +25,8 @@ Zwróćmy uwagę, że wewnątrz nie znajduje się *lorem ipsum*. Zamiast tego, d
 
 ### 2. Wybierz środowisko.
 
+Proponuję zawczasu stworzyć własne repo [na podstawie szablonu][repo-template].
+
 Przejdź do wybranej instrukcji:
 
 - [LaTeX](latex)
@@ -49,3 +51,4 @@ Moją intencją było zachować możliwie zbliżony wygląd dokumentów wygenero
 [lncss-springer]: http://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines
 [overlaf]: https://www.overleaf.com
 [releases]: https://github.com/marcullo/WUT-Article/releases
+[repo-template]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
