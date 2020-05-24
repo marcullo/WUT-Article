@@ -6,8 +6,8 @@ Szablon LaTeX artykułu z treścią: *Zasady składania artykułu z wykorzystani
 
 **Środowisko testowe**:
 
-- `Ubuntu 18.04.3 LTS`
-- `TeXstudio 2.12.16`
+- `Ubuntu 20.04 LTS`.
+- `TeXstudio 2.12.22`.
 
 ## Instalacja
 
