@@ -26,6 +26,7 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode} % texlive science
 \usepackage{subfig}
+\usepackage{caption}
 
 % Paths
 \graphicspath{{media/}}
@@ -36,6 +37,11 @@
 	compat=1.12
 }
 \setlist{topsep=4pt}
+
+% Caption font
+% https://en.wikibooks.org/wiki/LaTeX/Fonts#Built-in_sizes
+\captionsetup[figure]{font=small}
+\captionsetup[table]{font=small}
 
 % Commands
 \renewcommand\UrlFont{\color{blue}\rmfamily} % blue roman url font, Springer's eBook style
