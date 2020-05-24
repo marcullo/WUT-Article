@@ -14,16 +14,10 @@ Szablon LaTeX artykułu z treścią: *Zasady składania artykułu z wykorzystani
 1. Zainstaluj *TeXStudio*.
 
 ```shell
-apt-get install texlive texstudio
+apt-get install texstudio texlive texlive-lang-polish texlive-latex-extra texlive-science
 ```
 
-2. [Zainstaluj pakiet][package-installation], jeśli któregoś Ci brakuje (aby to sprawdzić skompiluj projekt). Jeśli masz zainstalowaną grupę pakietów, prawdopodobnie masz wszystkie wypisane poniżej (ew. poza pakietem `texlive-lang-polish`).
-
-```
-texlive-lang-polish geometry babel inputenc fontenc bm hyperref bm tikz pgfplots enumitem array algorithm algpseudocode subfig
-```
-
-**Uwaga**: Pakiety mogą mieć inną oficjalną nazwę.
+2. [Zainstaluj pakiet][package-installation], gdyby jeszcze któregoś brakowało.
 
 ## Konfiguracja
 
